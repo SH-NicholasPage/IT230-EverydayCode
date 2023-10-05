@@ -37,7 +37,7 @@ bool runEqTest(T num1, T num2, const string& testName, bool *failed)
 {
     if(num1 != num2)
     {
-        cerr << testName << " failed. Expected: " << num1 << " Actual: " << num2 << endl;
+        cerr << testName << " failed. Expected: " << num1 << " Actual: " << num2 << endl << flush;
         if(failed != nullptr)
         {
             *failed = true;
@@ -85,7 +85,7 @@ bool testMeanOfEvenNumbers()
 
     if(failed == false)
     {
-        cout << "testMeanOfEvenNumbers passed!" << endl << endl;
+        cout << "testMeanOfEvenNumbers passed!" << endl << endl << flush;
     }
 
     return failed;
@@ -96,7 +96,7 @@ bool testWordBuilder()
     char letters[] = {'a', 'b', 'c', 'd', 'e'};
     size_t returnSize = 0;
     string* words = wordBuilder(letters, 5, &returnSize);
-    cout << "You returned the following words: " << endl;
+    cout << "You returned the following words: " << endl << flush;
 
     for (int i = 0; i < returnSize; i++)
     {
@@ -104,11 +104,11 @@ bool testWordBuilder()
 
         if(i < returnSize - 1)
         {
-            cout << ", ";
+            cout << ", " << flush;
         }
     }
 
-    cout << endl << endl;
+    cout << endl << endl << flush;
 
     delete[] words;
 
@@ -120,8 +120,7 @@ bool testWordBuilderTC()
     char letters[] = {'a', 'b', 'c', 'd'};
     size_t returnSize = 0;
     string* words = wordBuilderTC(letters, 5, &returnSize);
-    cout << "You returned the following three-letter words: " << endl;
-    int size = sizeof(words)/sizeof(words[0]);
+    cout << "You returned the following three-letter words: " << endl << flush;
 
     for (int i = 0; i < returnSize; i++)
     {
@@ -129,11 +128,11 @@ bool testWordBuilderTC()
 
         if(i < returnSize - 1)
         {
-            cout << ", ";
+            cout << ", " << flush;
         }
     }
 
-    cout << endl << endl;
+    cout << endl << endl << flush;
 
     delete[] words;
 
@@ -157,7 +156,7 @@ bool testCountOnes()
 
     if(failed == false)
     {
-        cout << "testCountOnes passed!" << endl << endl;
+        cout << "testCountOnes passed!" << endl << endl << flush;
     }
 
     return failed;
