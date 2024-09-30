@@ -171,3 +171,5 @@ _NCrunch*
 *.app
 
 cmake-build-debug/
+
+.idea
