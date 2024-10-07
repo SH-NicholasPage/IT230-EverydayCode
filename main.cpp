@@ -118,7 +118,7 @@ bool testWordBuilderTC()
 {
     constexpr char letters[] = {'a', 'b', 'c', 'd'};
     size_t returnSize = 0;
-    const string* words = wordBuilderTC(letters, 5, &returnSize);
+    const string* words = wordBuilderTC(letters, 4, &returnSize);
     cout << "You returned the following three-letter words: " << endl << flush;
 
     for (int i = 0; i < returnSize; i++)
